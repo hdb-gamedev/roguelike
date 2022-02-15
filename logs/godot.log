@@ -1,0 +1,10 @@
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1070/PCIe/SSE2
+OpenGL ES Batching: ON
+ERROR: Condition "status < 0" is true. Returned: ERR_CANT_OPEN
+   at: init_device (drivers/alsa/audio_driver_alsa.cpp:89) - Condition "status < 0" is true. Returned: ERR_CANT_OPEN
+WARNING: All audio drivers failed, falling back to the dummy driver.
+   at: initialize (servers/audio_server.cpp:222) - All audio drivers failed, falling back to the dummy driver.
+ 
+ERROR: Condition "default_certs != nullptr" is true.
+   at: load_default_certificates (modules/mbedtls/crypto_mbedtls.cpp:314) - Condition "default_certs != nullptr" is true.
