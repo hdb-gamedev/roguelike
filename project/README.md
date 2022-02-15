@@ -1,0 +1,2 @@
+# Godot Project
+The Godot project files are found in here: this is what is actually built by the CI into the executables. You would open this folder in the Godot editor, not the whole GitHub repository.
