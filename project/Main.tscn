@@ -11,3 +11,12 @@ script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 129.0
+margin_top = 97.0
+margin_right = 169.0
+margin_bottom = 111.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
