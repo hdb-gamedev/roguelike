@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://UI/Bar.gd" type="Script" id=1]
+[ext_resource path="res://UI/GUI0.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = SubResource( 1 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = SubResource( 2 )
+region = Rect2( 96, 1, 48, 14 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = SubResource( 2 )
+region = Rect2( 96, 20, 64, 8 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OutsideBar" type="TextureRect" parent="."]
+margin_right = 199.0
+margin_bottom = 34.0
+texture = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="look at gui" type="TextureRect" parent="."]
+margin_top = 19.0
+margin_right = 64.0
+margin_bottom = 59.0
+texture = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
