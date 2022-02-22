@@ -1,21 +1,36 @@
-extends Control
+extends AspectRatioContainer
 export(int) var max_health
-#add a space when he isn't looking
-export(Texture) var bar_texture
-#make stuff bigger
-#make everything bigger
-#add scale on canvas layer?
-#Center stuff, no containers
-#make a canvas layer???????
-#aspect ratio is important
-#Christopher says use containers
-#
+export(Texture) var fill_texture
+export(Texture) var end_texture
 
-# Called when the node enters the scene tree for the first time.
+var fill = 0.5
+
+var border_width
+var border_height
+
+var inside_width = 64
+var inside_height = 4
+
+var hpixel
+var vpixel
+
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	border_width = $Control/Border.texture.get_width()
+	border_height = $Control/Border.texture.get_height()
+	
+	hpixel = 1.0 / border_width
+	vpixel = 1.0 / border_height
+	
+	ratio = float(border_width) / float(border_height)
+	
+	$Control/Inside.anchor_left = (border_width - inside_width)/2.0 * hpixel
+#	$Control/Inside.anchor_left = 2.0/68.0
+	$Control/Inside.anchor_right = 1 - $Control/Inside.anchor_left
+	$Control/Inside.anchor_top = (border_height - inside_height)/2.0 * vpixel
+	$Control/Inside.anchor_bottom = 1 - $Control/Inside.anchor_top
+#	var fill_rect1: TextureRect = TextureRect.instance()
+#	$Inside.add_child(fill_rect1)
+#	fill_rect1.anchor_left = 1 * pixel
+#	fill_rect1.anchor_top = 1 * pixel
+#	fill_rect1.anchor_bottom = 5 * pixel
+#	fill_rect1.anchor_bottom = 17 * pixel
