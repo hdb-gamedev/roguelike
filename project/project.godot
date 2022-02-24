@@ -21,6 +21,7 @@ enabled=PoolStringArray( "res://addons/vnen.tiled_importer/plugin.cfg" )
 [global]
 
 cam=false
+pixel=true
 
 [physics]
 

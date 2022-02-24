@@ -1,15 +1,21 @@
+tool
+
 extends AspectRatioContainer
 export(int) var max_health
 export(Texture) var fill_texture
 export(Texture) var end_texture
 
-var fill = 0.5
+export(float, 0.0, 1.0) var fill = 0.5 setget set_fill
 
 var border_width
 var border_height
 
+onready var fill_rect = $Control/Inside/fill
+
 var inside_width = 64
 var inside_height = 4
+
+var num_bars = 4
 
 var hpixel
 var vpixel
@@ -23,14 +29,15 @@ func _ready():
 	
 	ratio = float(border_width) / float(border_height)
 	
-	$Control/Inside.anchor_left = (border_width - inside_width)/2.0 * hpixel
-#	$Control/Inside.anchor_left = 2.0/68.0
-	$Control/Inside.anchor_right = 1 - $Control/Inside.anchor_left
-	$Control/Inside.anchor_top = (border_height - inside_height)/2.0 * vpixel
-	$Control/Inside.anchor_bottom = 1 - $Control/Inside.anchor_top
-#	var fill_rect1: TextureRect = TextureRect.instance()
-#	$Inside.add_child(fill_rect1)
-#	fill_rect1.anchor_left = 1 * pixel
-#	fill_rect1.anchor_top = 1 * pixel
-#	fill_rect1.anchor_bottom = 5 * pixel
-#	fill_rect1.anchor_bottom = 17 * pixel
+	
+	$Control/Inside.anchor_left = 2.0 / border_width
+	$Control/Inside.anchor_right = 1 - 2.0 / border_width
+	$Control/Inside.anchor_top = 5.0 / border_height
+	$Control/Inside.anchor_bottom = 1 - 5.0 / border_height
+	
+func set_fill(x):
+	fill = x
+	var full_bars = floor(x/num_bars)
+	
+	if fill_rect:
+		fill_rect.material.set_shader_param("fill", lerp(-2.0/64.0, 1.0, fill))
