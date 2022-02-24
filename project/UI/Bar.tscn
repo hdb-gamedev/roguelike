@@ -1,36 +1,69 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://UI/Bar.gd" type="Script" id=1]
 [ext_resource path="res://UI/border.png" type="Texture" id=2]
 [ext_resource path="res://UI/inside.png" type="Texture" id=3]
+[ext_resource path="res://UI/end.png" type="Texture" id=4]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float fill;
+uniform sampler2D end;
+
+void fragment(){
+	COLOR = texture(TEXTURE, UV);
+	if (UV.x > fill) {
+		COLOR = texture(end, UV - vec2(fill, 0.0));
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/fill = 1.0
+shader_param/end = ExtResource( 4 )
 
 [node name="AspectRatioContainer" type="AspectRatioContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+ratio = 4.25
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 fill_texture = ExtResource( 3 )
+fill = 1.0
 
 [node name="Control" type="Control" parent="."]
-margin_left = 212.0
-margin_right = 812.0
-margin_bottom = 600.0
+margin_top = 179.529
+margin_right = 1024.0
+margin_bottom = 420.471
+
+[node name="Inside" type="Control" parent="Control"]
+anchor_left = 0.0294118
+anchor_top = 0.3125
+anchor_right = 0.970588
+anchor_bottom = 0.6875
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fill" type="TextureRect" parent="Control/Inside"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Border" type="TextureRect" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Inside" type="ColorRect" parent="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
-color = Color( 1, 1, 1, 0.619608 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
