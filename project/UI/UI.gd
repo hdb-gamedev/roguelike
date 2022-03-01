@@ -1,7 +1,8 @@
 extends Control
 
-var time = 0
-
-func _process(delta):
-	time += delta
-	$bar.fill = sin(time) * 0.5 + 0.5
+func _ready():
+	Globulars.connect("health_changed", self, "change_health")
+	Globulars.connect("max_health_changed", self, "change_health")
+	
+func change_health():
+	$bar.fill = Globulars.health / Globulars.max_health

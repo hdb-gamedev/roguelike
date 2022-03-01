@@ -1,5 +1,6 @@
 extends KinematicBody2D
 export(float) var speed
+
 func _physics_process(delta):
 	var velocity = Vector2(0,0)
 	if Input.is_action_pressed("move_up"):
