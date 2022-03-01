@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/border.png-547737ff636555eeaeb70c70a26ae29b.stex"
+path="res://.import/border.png-dbd5f0b39e3bd14d8ab3a8d4ce186db2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/border.png"
-dest_files=[ "res://.import/border.png-547737ff636555eeaeb70c70a26ae29b.stex" ]
+source_file="res://UI/Bar/border.png"
+dest_files=[ "res://.import/border.png-dbd5f0b39e3bd14d8ab3a8d4ce186db2.stex" ]
 
 [params]
 
