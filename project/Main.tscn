@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Tilemap/pitsMAP.tres" type="TileSet" id=1]
 [ext_resource path="res://Tilemap/ObjectsMAP.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Tilemap/floor.tres" type="TileSet" id=4]
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Tilemap/generate_collisions.gd" type="Script" id=6]
+[ext_resource path="res://Tilemap/light.png" type="Texture" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,6 +29,14 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -589810, 8, 0, -524287, 4, 1, -524286, 8, 1, -524285, 4, 3, -524276, 3, 0, -524275, 7, 0, -524274, 7, 1, -524273, 7, 2, -458751, 9, 65542, -458749, 9, 65542, -393201, 16, 4, -327678, 9, 6, -262138, 2, 0, -262136, 8, 0, -262129, 2, 4, -196606, 9, 6, -196602, 4, 7, -196600, 9, 0, -196595, 2, 7, -131057, 16, 65537, -131054, 2, 6, 65536, 2, 0, 131087, 16, 65537, 196621, 2, 7, 262148, 8, 0, 262152, 2, 0, 262154, 8, 0, 262159, 8, 0 )
 
+[node name="Light2D" type="Light2D" parent="objects"]
+position = Vector2( 73, 72 )
+texture = ExtResource( 7 )
+texture_scale = 0.4
+color = Color( 0.878431, 0.6, 0.301961, 1 )
+energy = 0.8
+shadow_enabled = true
+
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 52, -28 )
 speed = 100.0
@@ -36,6 +45,27 @@ speed = 100.0
 current = true
 zoom = Vector2( 0.25, 0.25 )
 
+[node name="Light2D2" type="Light2D" parent="Player"]
+texture = ExtResource( 7 )
+texture_scale = 0.4
+color = Color( 0.878431, 0.6, 0.301961, 1 )
+energy = 0.8
+shadow_enabled = true
+shadow_gradient_length = 3.0
+shadow_filter = 2
+shadow_filter_smooth = 50.0
+
+[node name="Light2D3" type="Light2D" parent="Player"]
+texture = ExtResource( 7 )
+texture_scale = 0.4
+energy = 0.45
+shadow_gradient_length = 3.0
+shadow_filter = 2
+shadow_filter_smooth = 50.0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 5 )]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.192157, 0.294118, 0.301961, 1 )
