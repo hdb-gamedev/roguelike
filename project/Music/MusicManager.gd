@@ -9,5 +9,4 @@ func _ready():
 	stream.loop_begin = loop_begin
 	stream.loop_end = loop_end
 	stream.loop_mode = stream.LOOP_FORWARD
-	
-	print(stream.loop_mode, " ", stream.loop_begin, " ", stream.loop_end)
+	play()

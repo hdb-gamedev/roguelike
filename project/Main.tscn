@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Tilemap/pitsMAP.tres" type="TileSet" id=1]
 [ext_resource path="res://Tilemap/ObjectsMAP.tres" type="TileSet" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Tilemap/generate_collisions.gd" type="Script" id=6]
 [ext_resource path="res://Tilemap/light.png" type="Texture" id=7]
 [ext_resource path="res://Light2D.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Music/MusicManager.gd" type="Script" id=9]
+[ext_resource path="res://Music/ambiance.wav" type="AudioStream" id=10]
 
 [node name="Node2D" type="Node2D"]
 
@@ -64,3 +66,9 @@ shadow_filter_smooth = 50.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0, 0, 0, 1 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 9 )
+ambiance = ExtResource( 10 )
+loop_begin = 2405533
+loop_end = 4456184
