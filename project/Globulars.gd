@@ -20,3 +20,12 @@ var inventory
 
 func _ready():
 	inventory = []
+	
+func add_item(item):
+	for item_stack in inventory:
+		if item_stack.name == item.name:
+			item_stack.count += item.count
+			return
+	inventory.append(item)
+	print(inventory)
+
