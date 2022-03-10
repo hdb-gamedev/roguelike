@@ -15,3 +15,8 @@ func set_max_health(h):
 	emit_signal("max_health_changed", h)
 	
 signal max_health_changed(max_health)
+
+var inventory
+
+func _ready():
+	inventory = []
