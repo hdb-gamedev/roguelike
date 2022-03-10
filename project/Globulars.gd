@@ -2,6 +2,8 @@ extends Node
 
 var health setget set_health
 
+var player
+
 func set_health(h):
 	health = h
 	emit_signal("health_changed", h)
