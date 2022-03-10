@@ -4,6 +4,8 @@ export(float) var speed
 func _ready():
 	$AnimatedSprite.animation = "down"
 
+var is_walking = false
+
 func _physics_process(delta):
 	var velocity = Vector2(0,0)
 	if Input.is_action_pressed("move_up"):
@@ -18,18 +20,24 @@ func _physics_process(delta):
 	velocity = velocity.normalized()
 	velocity = move_and_slide(velocity * speed)
 	
+	var newanimation
 	if velocity.x > 0:
-		$AnimatedSprite.animation = "right"
-		$AnimatedSprite.playing = true
+		newanimation = "right"
 	elif velocity.x < 0:
-		$AnimatedSprite.animation = "left"
-		$AnimatedSprite.playing = true
+		newanimation = "left"
 	elif velocity.y < 0:
-		$AnimatedSprite.animation = "up"
-		$AnimatedSprite.playing = true
+		newanimation = "up"
 	elif velocity.y > 0 :
-		$AnimatedSprite.animation = "down"
-		$AnimatedSprite.playing = true
+		newanimation = "down"
 	else:
+		newanimation = null
+		
+	if is_walking and newanimation == null:
+		is_walking = false
 		$AnimatedSprite.playing = false
 		$AnimatedSprite.frame = 1
+	elif newanimation != null and (not is_walking or newanimation != $AnimatedSprite.animation):
+		is_walking = true
+		$AnimatedSprite.animation = newanimation
+		$AnimatedSprite.playing = true
+		$AnimatedSprite.frame = 0
