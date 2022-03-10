@@ -4,31 +4,31 @@
 [ext_resource path="res://Tilemap/Floor.png" type="Texture" id=2]
 
 [sub_resource type="OccluderPolygon2D" id=625]
-polygon = PoolVector2Array( 7, 1, 16, 1, 16, 3, 9, 3, 9, 16, 7, 16 )
+polygon = PoolVector2Array( 7.26485, 0.440369, 15.8324, 0.570175, 15.7026, 3.29621, 9.40672, 3.29621, 9.21201, 15.8879, 7.13503, 16 )
 
 [sub_resource type="OccluderPolygon2D" id=626]
-polygon = PoolVector2Array( 9, 16, 7, 16, 7, 0, 9, 0 )
+polygon = PoolVector2Array( 9.27692, 15.9844, 7.26485, 15.9844, 7.26485, 0.731636, 9.27692, 0.731636 )
 
 [sub_resource type="OccluderPolygon2D" id=627]
-polygon = PoolVector2Array( 16, 0, 7, 0, 7, 3, 16, 3 )
+polygon = PoolVector2Array( 16, 0, 7.26485, 0, 7.26485, 2.84025, 16, 2.84025 )
 
 [sub_resource type="OccluderPolygon2D" id=628]
-polygon = PoolVector2Array( 16, 1, 0, 1, 0, 3, 16, 3.10149 )
+polygon = PoolVector2Array( 16, 0, 0.221794, 0, 0.221794, 3.10149, 16, 3.10149 )
 
 [sub_resource type="OccluderPolygon2D" id=635]
-polygon = PoolVector2Array( 9, 0, 7, 0, 7, 2, 9, 2 )
+polygon = PoolVector2Array( 0.202332, 2.9785, 6.75778, 3.36793, 7.0174, 15.7, 8.89966, 15.8947, 8.83475, 0.382278, 0.137421, 0.252472 )
 
 [sub_resource type="OccluderPolygon2D" id=629]
-polygon = PoolVector2Array( 9.01567, 3.68564, 8.95077, 16, 7.06851, 16, 7, 3, 0, 3, 0, 1, 9, 1 )
+polygon = PoolVector2Array( 9.01567, 3.68564, 8.95077, 16, 7.06851, 16, 7.13342, 3.55583, 0, 3.29621, 0, 0, 8.88586, 0 )
 
 [sub_resource type="OccluderPolygon2D" id=630]
-polygon = PoolVector2Array( 9, 3, 0, 3, 0, 0, 9, 0 )
+polygon = PoolVector2Array( 9.08057, 3.22968, 0, 3.22968, 0, 0, 9.14548, 0 )
 
 [sub_resource type="OccluderPolygon2D" id=636]
 polygon = PoolVector2Array( 7, 16, 7, 0, 9, 0, 9, 1, 16, 1, 16, 3, 9, 3, 9, 16 )
 
 [sub_resource type="OccluderPolygon2D" id=632]
-polygon = PoolVector2Array( 0, 3, 7, 3, 7, 16, 9, 16, 9, 3, 16, 3, 16, 1, 0, 1 )
+polygon = PoolVector2Array( 0.365402, 3.01176, 6.72614, 3.40119, 6.98576, 15.6683, 8.93291, 15.7332, 9.06273, 3.07666, 15.748, 2.94685, 15.748, 1.32421, 0.235588, 1.1295 )
 
 [sub_resource type="OccluderPolygon2D" id=637]
 polygon = PoolVector2Array( 0, 1, 7, 1, 7, 0, 9, 0, 9, 1, 16, 1, 16, 3, 9, 3, 9, 16, 7, 16, 7, 3, 0, 3 )
