@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Decor1.png-c4300f06808eb704ec1e20e651c9ad96.stex"
+path="res://.import/light-2.png-2d3deaf6e5fa7af4c556a467306e6884.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilemap/Decor1.png"
-dest_files=[ "res://.import/Decor1.png-c4300f06808eb704ec1e20e651c9ad96.stex" ]
+source_file="res://Lighting/light-2.png"
+dest_files=[ "res://.import/light-2.png-2d3deaf6e5fa7af4c556a467306e6884.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

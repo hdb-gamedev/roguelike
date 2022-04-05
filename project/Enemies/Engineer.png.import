@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wall.png-a118ee84b70d373a413b88210ea59fc8.stex"
+path="res://.import/Engineer.png-9c30e8033cf2dde0c106319b95eabd93.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilemap/Wall.png"
-dest_files=[ "res://.import/Wall.png-a118ee84b70d373a413b88210ea59fc8.stex" ]
+source_file="res://Enemies/Engineer.png"
+dest_files=[ "res://.import/Engineer.png-9c30e8033cf2dde0c106319b95eabd93.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

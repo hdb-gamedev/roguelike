@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light-2.png-0c14ae82ea460e361d82b90d20b8ecda.stex"
+path="res://.import/Pit1.png-7927bfb475961b66872f429f521ac004.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilemap/light-2.png"
-dest_files=[ "res://.import/light-2.png-0c14ae82ea460e361d82b90d20b8ecda.stex" ]
+source_file="res://Tilemap/Textures/Pit1.png"
+dest_files=[ "res://.import/Pit1.png-7927bfb475961b66872f429f521ac004.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

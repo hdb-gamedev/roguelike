@@ -3,6 +3,7 @@ export(float) var speed
 
 func _ready():
 	$AnimatedSprite.animation = "down"
+	$AnimatedSprite.frame = 1
 	Globulars.player = self
 
 var is_walking = false
