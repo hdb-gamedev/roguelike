@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Undead0.png-ba76ade044673dd8ba66938d29dc22b7.stex"
+path="res://.import/Undead0.png-79ee59598766b4967ec889fd46354e6d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Undead0.png"
-dest_files=[ "res://.import/Undead0.png-ba76ade044673dd8ba66938d29dc22b7.stex" ]
+source_file="res://enemies/Undead0.png"
+dest_files=[ "res://.import/Undead0.png-79ee59598766b4967ec889fd46354e6d.stex" ]
 
 [params]
 
