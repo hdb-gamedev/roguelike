@@ -2,37 +2,48 @@ tool
 extends TileSet
 
 var template
-var offset
 var tile_size = 16
 
 # becasue i couldn't get export vars to work
-var offsets = {
-	'Wall': Vector2(0, 48)
+var spacings = {
+	'Wall': Vector2(112, 48)
+}
+
+var howmany = {
+	'Wall': Vector2(3, 16)
 }
 
 func _init():
 	var name = resource_path.get_file().trim_suffix('.tres')
+	
+	if not name:
+		return
 		
+	print("doing tilemap " + name)
+	
 	template = find_tile_by_name("template")
-	offset = offsets[name]
+	var spacing = spacings[name]
 	
 	reset()
 	
-	make_tile()
+	
+	for y in range(howmany[name].y):
+		for x in range(howmany[name].x):
+			make_tile(spacing * Vector2(x, y+1))
 	
 func reset():
 	for id in get_tiles_ids():
 		if id != template:
 			remove_tile(id)
 
-func make_tile():
+func make_tile(offset):
 	var id = get_last_unused_tile_id()
 	create_tile(id)
 	
 	tile_set_texture(id, tile_get_texture(template))
 	
 	var template_region = tile_get_region(template)
-	tile_set_region(id, Rect2(template_region.position + Vector2(0, offset.y), template_region.size))
+	tile_set_region(id, Rect2(template_region.position + offset, template_region.size))
 	
 	tile_set_tile_mode(id, AUTO_TILE)
 	autotile_set_size(id, autotile_get_size(template))
@@ -44,11 +55,13 @@ func make_tile():
 		shapes[info["autotile_coord"]] = info
 	
 	var num_autotiles = tile_get_region(template).size / autotile_get_size(template)
-	for i in range(num_autotiles.x):
-		for j in range(num_autotiles.y):
-			var coord = Vector2(i, j)
+	for x in range(num_autotiles.x):
+		for y in range(num_autotiles.y):
+			var coord = Vector2(x, y)
 			
 			autotile_set_bitmask(id, coord, autotile_get_bitmask(template, coord))
+			autotile_set_subtile_priority(id, coord, autotile_get_subtile_priority(template, coord))
+			autotile_set_z_index(id, coord, autotile_get_z_index(template, coord))
 			
 			if coord in shapes:
 				tile_add_shape(id, shapes[coord]["shape"], shapes[coord]["shape_transform"], shapes[coord]["one_way"], coord)
