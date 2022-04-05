@@ -3,7 +3,7 @@
 [ext_resource path="res://UI/Bar/Bar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/UI.gd" type="Script" id=2]
 [ext_resource path="res://ItemIcon.tscn" type="PackedScene" id=3]
-[ext_resource path="res://UI/HBoxContainer.gd" type="Script" id=4]
+[ext_resource path="res://UI/hotbar.gd" type="Script" id=4]
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
@@ -13,7 +13,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="hotbar" type="HBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -28,36 +28,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" parent="HBoxContainer" instance=ExtResource( 3 )]
+[node name="TextureRect" parent="hotbar" instance=ExtResource( 3 )]
 margin_left = 276.0
 margin_right = 340.0
 
-[node name="TextureRect2" parent="HBoxContainer" instance=ExtResource( 3 )]
+[node name="TextureRect2" parent="hotbar" instance=ExtResource( 3 )]
 margin_left = 344.0
 margin_right = 408.0
 index = 1
 
-[node name="TextureRect3" parent="HBoxContainer" instance=ExtResource( 3 )]
+[node name="TextureRect3" parent="hotbar" instance=ExtResource( 3 )]
 margin_left = 412.0
 margin_right = 476.0
 index = 2
 
-[node name="TextureRect4" parent="HBoxContainer" instance=ExtResource( 3 )]
+[node name="TextureRect4" parent="hotbar" instance=ExtResource( 3 )]
 margin_left = 480.0
 margin_right = 544.0
 index = 3
 
-[node name="TextureRect5" parent="HBoxContainer" instance=ExtResource( 3 )]
+[node name="TextureRect5" parent="hotbar" instance=ExtResource( 3 )]
 margin_left = 548.0
 margin_right = 612.0
 index = 4
 
-[node name="TextureRect6" parent="HBoxContainer" instance=ExtResource( 3 )]
+[node name="TextureRect6" parent="hotbar" instance=ExtResource( 3 )]
 margin_left = 616.0
 margin_right = 680.0
 index = 5
 
-[node name="TextureRect7" parent="HBoxContainer" instance=ExtResource( 3 )]
+[node name="TextureRect7" parent="hotbar" instance=ExtResource( 3 )]
 margin_left = 684.0
 margin_right = 748.0
 index = 6

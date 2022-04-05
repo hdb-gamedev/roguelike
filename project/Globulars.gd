@@ -19,7 +19,7 @@ func set_max_health(h):
 signal max_health_changed(max_health)
 
 var inventory
-var selected_hotbar_slot
+var selected_hotbar_slot = 1
 func _ready():
 	inventory = []
 	

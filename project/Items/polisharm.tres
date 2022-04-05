@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Items/Polearm.gd" type="Script" id=1]
+[ext_resource path="res://Items/LongWep.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 16, 16 )
+
+[resource]
+script = ExtResource( 1 )
+name = "Polish Arm"
+description = "from Poland"
+rarity = 4
+sprite = SubResource( 1 )
+properties = {
+}
