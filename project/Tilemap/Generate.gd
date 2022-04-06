@@ -8,11 +8,13 @@ var tile_size = 16
 var spacings = {
 	'Wall': Vector2(112, 48),
 	'Floor': Vector2(112, 48),
+	'Pit': Vector2(0, 32),
 }
 
 var howmany = {
 	'Wall': Vector2(3, 16),
 	'Floor': Vector2(3, 16),
+	'Pit': Vector2(1, 15),
 }
 
 func _init():
