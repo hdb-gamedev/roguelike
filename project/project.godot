@@ -12,10 +12,22 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Item",
 "language": "GDScript",
-"path": "res://Items/Item.gd"
+"path": "res://Item.gd"
+}, {
+"base": "Item",
+"class": "Polearm",
+"language": "GDScript",
+"path": "res://Items/Polearm.gd"
+}, {
+"base": "Item",
+"class": "Sword",
+"language": "GDScript",
+"path": "res://Items/Sword.gd"
 } ]
 _global_script_class_icons={
-"Item": ""
+"Item": "",
+"Polearm": "",
+"Sword": ""
 }
 
 [application]
@@ -95,6 +107,16 @@ hotbar_6={
 hotbar_7={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":55,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+primary_item={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+secondary_item={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 
