@@ -6,11 +6,13 @@ var tile_size = 16
 
 # becasue i couldn't get export vars to work
 var spacings = {
-	'Wall': Vector2(112, 48)
+	'Wall': Vector2(112, 48),
+	'Floor': Vector2(112, 48),
 }
 
 var howmany = {
-	'Wall': Vector2(3, 16)
+	'Wall': Vector2(3, 16),
+	'Floor': Vector2(3, 16),
 }
 
 func _init():
@@ -18,27 +20,35 @@ func _init():
 	
 	if not name:
 		return
-		
+	
 	print("doing tilemap " + name)
 	
 	template = find_tile_by_name("template")
+	
+	if template == -1:
+		print("please name the template 'template'")
+		return
+		
 	var spacing = spacings[name]
 	
 	reset()
 	
+	var i = 1
 	
-	for y in range(howmany[name].y):
-		for x in range(howmany[name].x):
-			make_tile(spacing * Vector2(x, y+1))
+	for x in range(howmany[name].x):
+		for y in range(howmany[name].y):
+			make_tile(spacing * Vector2(x, y+1), name + str(i))
+			i += 1
 	
 func reset():
 	for id in get_tiles_ids():
 		if id != template:
 			remove_tile(id)
 
-func make_tile(offset):
+func make_tile(offset, name):
 	var id = get_last_unused_tile_id()
 	create_tile(id)
+	tile_set_name(id, name)
 	
 	tile_set_texture(id, tile_get_texture(template))
 	
