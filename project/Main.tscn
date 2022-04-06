@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Tilemap/Tilesets/Wall.tres" type="TileSet" id=1]
 [ext_resource path="res://Tilemap/Tilesets/Floor.tres" type="TileSet" id=2]
 [ext_resource path="res://Enemies/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/polisharm.tres" type="Resource" id=4]
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ground_item.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Lighting/light.png" type="Texture" id=7]
 [ext_resource path="res://Music/MusicManager.gd" type="Script" id=9]
 [ext_resource path="res://Music/ambiance.wav" type="AudioStream" id=10]
@@ -66,3 +68,7 @@ script = ExtResource( 9 )
 ambiance = ExtResource( 10 )
 loop_begin = 2405533
 loop_end = 4456184
+
+[node name="ground_item" parent="." instance=ExtResource( 6 )]
+position = Vector2( 14, -15 )
+item = ExtResource( 4 )
