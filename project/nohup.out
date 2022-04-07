@@ -3818,3 +3818,518 @@ OpenGL ES Batching: ON
 **ERROR** OS_Unix::execute - Could not create child process while executing: gio
 **ERROR** OS_Unix::execute - Could not create child process while executing: kioclient5
 **ERROR** OS_Unix::execute - Could not create child process while executing: gvfs-trash
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is: "Variant use_primary(Variant)".
+          at: GDScript::reload (res://Items/Sword.gd:4)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+ERROR: Condition "tk_rb[ofs].type != TK_IDENTIFIER" is true. Returned: StringName()
+   at: get_token_identifier (modules/gdscript/gdscript_tokenizer.cpp:1117)
+ERROR: Condition "tk_rb[ofs].type != TK_IDENTIFIER" is true. Returned: StringName()
+   at: get_token_identifier (modules/gdscript/gdscript_tokenizer.cpp:1117)
+ERROR: Condition "tk_rb[ofs].type != TK_IDENTIFIER" is true. Returned: StringName()
+   at: get_token_identifier (modules/gdscript/gdscript_tokenizer.cpp:1117)
+SCRIPT ERROR: Parse Error: Unexpected token: ',':
+          at: GDScript::reload (res://Tilemap/Generate.gd:49)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+ERROR: Condition "tk_rb[ofs].type != TK_IDENTIFIER" is true. Returned: StringName()
+   at: get_token_identifier (modules/gdscript/gdscript_tokenizer.cpp:1117)
+ERROR: Condition "tk_rb[ofs].type != TK_IDENTIFIER" is true. Returned: StringName()
+   at: get_token_identifier (modules/gdscript/gdscript_tokenizer.cpp:1117)
+ERROR: Condition "tk_rb[ofs].type != TK_IDENTIFIER" is true. Returned: StringName()
+   at: get_token_identifier (modules/gdscript/gdscript_tokenizer.cpp:1117)
+ERROR: Condition "tk_rb[ofs].type != TK_IDENTIFIER" is true. Returned: StringName()
+   at: get_token_identifier (modules/gdscript/gdscript_tokenizer.cpp:1117)
+ERROR: Condition "tk_rb[ofs].type != TK_IDENTIFIER" is true. Returned: StringName()
+   at: get_token_identifier (modules/gdscript/gdscript_tokenizer.cpp:1117)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is: "Variant use_primary(Variant)".
+          at: GDScript::reload (res://Items/Sword.gd:4)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is: "Variant use_primary(Variant)".
+          at: GDScript::reload (res://Items/Sword.gd:4)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is: "Variant use_primary(Variant)".
+          at: GDScript::reload (res://Items/Sword.gd:4)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is: "Variant use_primary(Variant)".
+          at: GDScript::reload (res://Items/Sword.gd:4)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is: "Variant use_primary(Variant)".
+          at: GDScript::reload (res://Items/Sword.gd:4)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+[[Resource:1325]]
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+ERROR: Condition "err" is true. Returned: err
+   at: load_source_code (modules/gdscript/gdscript.cpp:775)
+ERROR: Cannot load source code from file 'res://Tilemap/AutotileTesting.gd'.
+   at: load (modules/gdscript/gdscript.cpp:2179)
+ERROR: Failed loading resource: res://Tilemap/AutotileTesting.gd. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270)
+xbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150 res://Tilemap/AutotileTesting.tscn
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150 res://Tilemap/AutotileTesting.tscn
+doing tilemap Wall
+doing tilemap Floor
+doing tilemap Pit
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150 res://Tilemap/AutotileTesting.tscn
+doing tilemap Wall
+doing tilemap Floor
+doing tilemap Pit
+doing tilemap Wall
+doing tilemap Floor
+doing tilemap Pit
+doing tilemap Wall
+doing tilemap Floor
+doing tilemap Pit
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150 res://Tilemap/AutotileTesting.tscn
+doing tilemap Wall
+doing tilemap Floor
+doing tilemap Pit
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150 res://Tilemap/AutotileTesting.tscn
+doing tilemap Wall
+doing tilemap Floor
+doing tilemap Pit
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150 res://Tilemap/AutotileTesting.tscn
+doing tilemap Wall
+doing tilemap Floor
+doing tilemap Pit
+doing tilemap Wall
+doing tilemap Floor
+doing tilemap Pit
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150 res://Tilemap/AutotileTesting.tscn
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150
+doing tilemap Wall
+doing tilemap Floor
+doing tilemap Pit
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 100533 --position 1888,150
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is: "Variant use_primary(Variant)".
+          at: GDScript::reload (res://Items/Sword.gd:4)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is: "Variant use_primary(Variant)".
+          at: GDScript::reload (res://Items/Sword.gd:4)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+SCRIPT ERROR: Parse Error: The function signature doesn't match the parent. Parent signature is: "Variant use_primary(Variant)".
+          at: GDScript::reload (res://Items/Sword.gd:4)
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566)
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+[[Resource:1325]]
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword secondary button
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword secondary button
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+[[Resource:1325]]
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword secondary button
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword secondary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+sword primary button held
+Godot Engine v3.4.2.stable.custom_build - https://godotengine.org
+OpenGL ES 3.0 Renderer: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
+OpenGL ES Batching: ON
+ 
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 132338 --position 1888,150
+Running: /nix/store/k2v3pv3bx5k3qcawcynwjwwsxbr8nk3k-godot-3.4.2/bin/godot --path /home/josh/data/roguelike/project --remote-debug 127.0.0.1:6007 --allow_focus_steal_pid 132338 --position 1888,150
