@@ -4,10 +4,12 @@ extends Node2D
 export(float) var mind
 export(float) var maxd
 var time = 0
+
+func _ready():
+	look_at(get_global_mouse_position())
+	#$AnimationPlayer.play("Polearm")
+
 func _process(delta):
-	time += delta
-	look_at(get_local_mouse_position())
-	var dist = cos(time) * (maxd - mind) + mind
-	move_local_x(dist)
-	if time > TAU / 2.0:
-		queue_free()
+	look_at(get_global_mouse_position())
+	if !$AnimationPlayer.is_playing():
+		visible = false

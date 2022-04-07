@@ -26,3 +26,5 @@ func _process(delta):
 			Globulars.inventory[Globulars.selected_hotbar_slot].use_secondary(player)
 		elif Input.is_action_pressed("secondary_item"):
 			Globulars.inventory[Globulars.selected_hotbar_slot].hold_secondary(player)
+	for i in range(min(Globulars.inventory.size(), 7)):
+		Globulars.inventory[i].update(delta)

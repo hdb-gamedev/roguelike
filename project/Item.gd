@@ -24,3 +24,7 @@ func hold_primary(player):
 	pass
 func hold_secondary(player):
 	pass
+func update(delta):
+	pass
+func initialize():
+	pass

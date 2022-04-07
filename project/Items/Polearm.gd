@@ -2,13 +2,26 @@ class_name Polearm
 extends Item
 
 const polearm_scene = preload("res://Items/PolearmScene.tscn")
+var cooldown = 0;
+var polearm
 
 func use_primary(player):
-	var polearm = polearm_scene.instance()
-	player.add_child(polearm)
+	if cooldown > 0:
+		pass
+	polearm.visible = true
+	polearm.get_node("AnimationPlayer").play("Polearm")
+	
 func hold_primary(player):
-	print("sword primary button held")
+	pass
+	
 func use_secondary(player):
-	print("sword secondary button")
+	pass
+
 func hold_secondary(player):
-	print("sword secondary button held")
+	pass
+func update(delta):
+	cooldown = max(cooldown - delta, 0)
+func initialize():
+	polearm = polearm_scene.instance()
+	polearm.visible = false
+	Globulars.player.add_child(polearm)
