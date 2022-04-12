@@ -4,23 +4,7 @@
 [ext_resource path="res://Enemies/Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2, 2 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 1 )
-region = Rect2( 16, 32, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 32, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 1 )
-region = Rect2( 48, 32, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
-region = Rect2( 32, 32, 16, 16 )
+extents = Vector2( 4, 2.5 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
@@ -37,6 +21,22 @@ region = Rect2( 48, 16, 16, 16 )
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
 region = Rect2( 32, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 32, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 1 )
@@ -72,14 +72,14 @@ region = Rect2( 32, 0, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
-"frames": [ SubResource( 7 ), SubResource( 6 ), SubResource( 9 ), SubResource( 8 ) ],
-"loop": true,
-"name": "right",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 3 ), SubResource( 2 ), SubResource( 5 ), SubResource( 4 ) ],
 "loop": true,
 "name": "left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 6 ), SubResource( 9 ), SubResource( 8 ) ],
+"loop": true,
+"name": "right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 11 ), SubResource( 10 ), SubResource( 13 ), SubResource( 12 ) ],
@@ -101,10 +101,12 @@ script = ExtResource( 2 )
 speed = 300.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.5 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
+animation = "down"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2147483648
