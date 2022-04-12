@@ -1,14 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Enemies/Undead0.png" type="Texture" id=1]
 [ext_resource path="res://Enemies/Undead1.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/ghost.gd" type="Script" id=3]
 [ext_resource path="res://Lighting/Light2D.tscn" type="PackedScene" id=4]
 
-
-[sub_resource type="PhysicsMaterial" id=11]
-friction = 0.14
-rough = true
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.0
@@ -53,11 +49,6 @@ animations = [ {
 "name": "everything",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 6 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 3 ), SubResource( 7 ) ],
 "loop": true,
 "name": "moving",
@@ -67,13 +58,16 @@ animations = [ {
 "loop": true,
 "name": "attack",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
 } ]
 
-[node name="Ghost" type="RigidBody2D"]
+[node name="Ghost" type="KinematicBody2D"]
 collision_layer = 0
 collision_mask = 0
-physics_material_override = SubResource( 11 )
-gravity_scale = 0.0
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -86,10 +80,11 @@ frame = 1
 playing = true
 
 [node name="AttackTimer" type="Timer" parent="."]
-wait_time = 0.45
+wait_time = 0.428
 autostart = true
 
 [node name="Light2D" parent="." instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 0, 0 )
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
