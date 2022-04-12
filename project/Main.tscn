@@ -82,21 +82,3 @@ item = ExtResource( 13 )
 
 [node name="Ghost" parent="." instance=ExtResource( 12 )]
 position = Vector2( 53, -86 )
-
-[node name="Ghost2" parent="." instance=ExtResource( 12 )]
-position = Vector2( -20, -66 )
-
-[node name="Ghost3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 111, -80 )
-
-[node name="Ghost4" parent="." instance=ExtResource( 12 )]
-position = Vector2( 55, -22 )
-
-[node name="Ghost5" parent="." instance=ExtResource( 12 )]
-position = Vector2( 113, -113 )
-
-[node name="Ghost6" parent="." instance=ExtResource( 12 )]
-position = Vector2( 2, -114 )
-
-[node name="Ghost7" parent="." instance=ExtResource( 12 )]
-position = Vector2( 124, -24 )

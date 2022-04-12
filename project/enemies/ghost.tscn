@@ -52,11 +52,6 @@ animations = [ {
 "name": "everything",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 6 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 3 ), SubResource( 7 ) ],
 "loop": true,
 "name": "moving",
@@ -65,6 +60,11 @@ animations = [ {
 "frames": [ SubResource( 4 ), SubResource( 8 ) ],
 "loop": true,
 "name": "attack",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 6 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 } ]
 
@@ -81,14 +81,14 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 10 )
 animation = "attack"
-frame = 1
 playing = true
 
 [node name="AttackTimer" type="Timer" parent="."]
-wait_time = 0.45
+wait_time = 0.039
 autostart = true
 
 [node name="Light2D" parent="." instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 0, 0 )
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]

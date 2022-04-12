@@ -1,7 +1,7 @@
 extends RigidBody2D
 #export var player_position = Vector2(-1,-1)
 
-export var speed = 50
+export var speed = 10
 
 func _on_AttackTimer_timeout():
 	var playerPosition = Globulars.player.global_transform.origin
