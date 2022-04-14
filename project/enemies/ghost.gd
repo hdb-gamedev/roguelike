@@ -1,4 +1,5 @@
 extends KinematicBody2D
+
 #export var player_position = Vector2(-1,-1)
 
 export var speed = 50
@@ -12,3 +13,16 @@ func _on_AttackTimer_timeout():
 	
 func _physics_process(delta):
 	move_and_slide(velocity)
+
+
+func _on_ghostbody_area_entered(area):
+	var parentnode = area
+	while parentnode.get("item") == null:
+		parentnode = parentnode.get_parent()
+	if not parentnode.visible:
+		return
+	var item = parentnode.get("item")
+	if not item.properties.has("damage"):
+		return
+	print(item.properties.get("damage"))
+	$AnimationPlayer.play("hit")

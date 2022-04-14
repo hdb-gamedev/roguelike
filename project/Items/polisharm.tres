@@ -14,4 +14,5 @@ description = "from Poland"
 rarity = 4
 sprite = SubResource( 1 )
 properties = {
+"damage": 10.0
 }

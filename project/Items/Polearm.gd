@@ -24,4 +24,5 @@ func update(delta):
 func initialize():
 	polearm = polearm_scene.instance()
 	polearm.visible = false
+	polearm.item = self
 	Globulars.player.add_child(polearm)
