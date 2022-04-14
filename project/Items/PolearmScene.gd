@@ -9,10 +9,10 @@ var item
 
 func _ready():
 	look_at(get_global_mouse_position())
-	print("item", item)
 	#$AnimationPlayer.play("Polearm")
 
 func _process(delta):
 	look_at(get_global_mouse_position())
 	if !$AnimationPlayer.is_playing():
 		visible = false
+		$Node2D/Area2D.collision_layer = 0

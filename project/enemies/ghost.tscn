@@ -30,6 +30,14 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 64, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 64, 16, 16 )
+
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
 region = Rect2( 32, 64, 16, 16 )
@@ -38,10 +46,6 @@ region = Rect2( 32, 64, 16, 16 )
 atlas = ExtResource( 2 )
 region = Rect2( 32, 64, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 64, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
 region = Rect2( 16, 64, 16, 16 )
@@ -49,10 +53,6 @@ region = Rect2( 16, 64, 16, 16 )
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
 region = Rect2( 48, 64, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 64, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
@@ -64,6 +64,11 @@ region = Rect2( 48, 64, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 4 ), SubResource( 8 ) ],
 "loop": true,
 "name": "attack",
@@ -78,11 +83,6 @@ animations = [ {
 "loop": true,
 "name": "moving",
 "speed": 5.0
-}, {
-"frames": [ SubResource( 2 ), SubResource( 6 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
 } ]
 
 [node name="Ghost" type="KinematicBody2D"]
@@ -91,6 +91,8 @@ collision_mask = 0
 script = ExtResource( 3 )
 
 [node name="ghostbody" type="Area2D" parent="."]
+collision_layer = 24
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ghostbody"]
 shape = SubResource( 1 )
@@ -104,6 +106,7 @@ anims/hit = SubResource( 12 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 10 )
 animation = "attack"
+frame = 1
 playing = true
 
 [node name="AttackTimer" type="Timer" parent="."]

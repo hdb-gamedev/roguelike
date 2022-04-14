@@ -10,6 +10,7 @@ func use_primary(player):
 		pass
 	polearm.visible = true
 	polearm.get_node("AnimationPlayer").play("Polearm")
+	polearm.get_node("Node2D/Area2D").collision_layer = 2
 	
 func hold_primary(player):
 	pass
@@ -25,4 +26,5 @@ func initialize():
 	polearm = polearm_scene.instance()
 	polearm.visible = false
 	polearm.item = self
+	polearm.get_node("Node2D/Area2D").collision_layer = 0
 	Globulars.player.add_child(polearm)
