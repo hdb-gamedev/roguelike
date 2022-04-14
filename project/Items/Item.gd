@@ -6,15 +6,21 @@ enum Rarity {
 	UNCOMMON,
 	RARE,
 	EPIC,
-	LEGENDARY
+	LEGENDARY,
 }
+var expected_parameters = ["damage", "critical chance"]
+
 
 export(String) var name 
 export(String) var description
 export(Rarity) var rarity
 export(Texture) var sprite
-export(Dictionary) var properties
+export(Dictionary) var properties = {} setget check_keys
 var count = 1
+
+func check_keys(value):
+	for key in value.keys():
+		assert(expected_parameters.has(key))
 
 func use_primary(player):
 	pass

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Items/Polearms/Polearm.gd" type="Script" id=1]
+[ext_resource path="res://Items/Assets/LongWep.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 48, 16, 16 )
+
+[resource]
+script = ExtResource( 1 )
+name = "Halibutberd"
+description = "a halberd that smells vaguely of halibut"
+rarity = 3
+sprite = SubResource( 1 )
+properties = {
+"critical chance": 0.1,
+"damage": 10.0
+}

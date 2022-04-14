@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Engineer.png-9c30e8033cf2dde0c106319b95eabd93.stex"
+path="res://.import/Engineer.png-7e2e67e7b097edf79906b9ddac15a836.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Engineer.png"
-dest_files=[ "res://.import/Engineer.png-9c30e8033cf2dde0c106319b95eabd93.stex" ]
+source_file="res://enemies/Engineer.png"
+dest_files=[ "res://.import/Engineer.png-7e2e67e7b097edf79906b9ddac15a836.stex" ]
 
 [params]
 

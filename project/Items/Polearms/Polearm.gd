@@ -1,7 +1,7 @@
 class_name Polearm
 extends Item
 
-const polearm_scene = preload("res://Items/PolearmScene.tscn")
+const polearm_scene = preload("res://Items/Polearms/PolearmScene.tscn")
 var cooldown = 0;
 var polearm
 
@@ -26,5 +26,6 @@ func initialize():
 	polearm = polearm_scene.instance()
 	polearm.visible = false
 	polearm.item = self
+	polearm.get_node("Node2D/Sprite").texture = sprite
 	polearm.get_node("Node2D/Area2D").collision_layer = 0
 	Globulars.player.add_child(polearm)

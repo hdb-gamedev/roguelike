@@ -17,29 +17,24 @@ _global_script_classes=[ {
 "base": "Item",
 "class": "Polearm",
 "language": "GDScript",
-"path": "res://Items/Polearm.gd"
+"path": "res://Items/Polearms/Polearm.gd"
 }, {
 "base": "Node2D",
 "class": "PolearmScene",
 "language": "GDScript",
-"path": "res://Items/PolearmScene.gd"
-}, {
-"base": "Item",
-"class": "Sword",
-"language": "GDScript",
-"path": "res://Items/Sword.gd"
+"path": "res://Items/Polearms/PolearmScene.gd"
 } ]
 _global_script_class_icons={
 "Item": "",
 "Polearm": "",
-"PolearmScene": "",
-"Sword": ""
+"PolearmScene": ""
 }
 
 [application]
 
 config/name="roguelike"
 run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
 
 [autoload]
 
