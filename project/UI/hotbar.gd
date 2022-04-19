@@ -17,6 +17,7 @@ func _process(delta):
 		Globulars.selected_hotbar_slot = 5
 	elif Input.is_action_just_pressed("hotbar_7"):
 		Globulars.selected_hotbar_slot = 6
+	
 	if Globulars.selected_hotbar_slot < Globulars.inventory.size():
 		if Input.is_action_just_pressed("primary_item"):
 			Globulars.inventory[Globulars.selected_hotbar_slot].use_primary(player)
