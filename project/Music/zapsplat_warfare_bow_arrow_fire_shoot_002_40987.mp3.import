@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_warfare_bow_arrow_fire_shoot_002_40987.mp3-3b89460aea05b17c4b9f2f4b85bf1426.mp3str"
+
+[deps]
+
+source_file="res://Music/zapsplat_warfare_bow_arrow_fire_shoot_002_40987.mp3"
+dest_files=[ "res://.import/zapsplat_warfare_bow_arrow_fire_shoot_002_40987.mp3-3b89460aea05b17c4b9f2f4b85bf1426.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

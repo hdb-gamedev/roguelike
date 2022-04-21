@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/warfare_swords_x_2_hit_lightly_002.mp3-80686723ef57f654cbe2d8e59e4d7eea.mp3str"
+
+[deps]
+
+source_file="res://Items/Polearms/warfare_swords_x_2_hit_lightly_002.mp3"
+dest_files=[ "res://.import/warfare_swords_x_2_hit_lightly_002.mp3-80686723ef57f654cbe2d8e59e4d7eea.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

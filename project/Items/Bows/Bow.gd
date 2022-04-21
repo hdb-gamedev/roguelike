@@ -11,7 +11,8 @@ func use_primary(player):
 	projectile.global_position = player.global_position
 	projectile.look_at(player.get_global_mouse_position())
 	Globulars.player.get_parent().get_parent().add_child(projectile)
-
+	bow.get_node("AudioStreamPlayer").play()
+	print("Playing")
 func update(delta):
 	# set bow to visible if it is the currently selected item
 	bow.visible = Globulars.inventory.find(self) == Globulars.selected_hotbar_slot

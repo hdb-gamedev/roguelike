@@ -72,7 +72,6 @@ tile_data = PoolIntArray( 3, 13, 0, 4, 13, 2, 7, 13, 0, 8, 13, 2, 65539, 13, 655
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 5 )]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

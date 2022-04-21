@@ -11,6 +11,7 @@ func use_primary(player):
 	polearm.visible = true
 	polearm.get_node("AnimationPlayer").play("Polearm")
 	polearm.get_node("Node2D/Area2D").collision_layer = 2
+	polearm.get_node("AudioStreamPlayer").play()
 	
 func hold_primary(player):
 	pass
