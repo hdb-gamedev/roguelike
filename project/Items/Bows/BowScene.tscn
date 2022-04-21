@@ -16,6 +16,10 @@ position = Vector2( 12, 0 )
 rotation = 3.92699
 texture = SubResource( 1 )
 
+[node name="FirePosition" type="Position2D" parent="Sprite"]
+position = Vector2( -1.41422, 1.41421 )
+rotation = 2.3562
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 

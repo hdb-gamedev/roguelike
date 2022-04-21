@@ -14,5 +14,6 @@ description = "bad"
 rarity = 0
 sprite = SubResource( 1 )
 properties = {
-"damage": 10.0
+"damage": 10.0,
+"reload time": 10.0
 }

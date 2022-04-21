@@ -8,7 +8,7 @@ enum Rarity {
 	EPIC,
 	LEGENDARY,
 }
-var expected_parameters = ["damage", "critical chance"]
+var expected_parameters = ["damage", "reload time"]
 
 
 export(String) var name 
