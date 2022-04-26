@@ -38,55 +38,56 @@ func debug_rect(rect: Rect2) -> ColorRect:
 	add_child_below_node(player, color_rect)
 	return color_rect
 	
-	
-func debug_rect_and_wait(rect: Rect2):
-	var color_rect := debug_rect(rect)
-	
-	yield(button, "button_down")
-	
-	color_rect.queue_free()
-	
 
 func place_rooms():
-	var min_room_size := 4
+	var room_max_count := 50
 	
-	var queue := [Rect2(Vector2.ZERO, world_size)]
-	while queue:
-		var room: Rect2 = queue.pop_front()
-		print("start: ", room.position, " end: ", room.end)
-		yield(debug_rect_and_wait(room), "completed")
+	var max_room_size := Vector2(8, 8)
+	
+	var rooms := []
+	
+	for i in room_max_count:
+		var location = Vector2(
+			rng.randi_range(0, world_size.x),
+			rng.randi_range(0, world_size.y)
+		)
 		
-		var is_vertical := rng.randf() > 0.5
+		var size := Vector2(
+			rng.randi_range(4, max_room_size.x),
+			rng.randi_range(4, max_room_size.y)
+		)
 		
-		if is_vertical:
-			print("vertical")
-			room = swap_rect_coordinates(room)
-		else:
-			print("horizontal")
 		
-		if room.size.x <= min_room_size * 2:
-			is_vertical = not is_vertical
-			room = swap_rect_coordinates(room)
-		if room.size.x > min_room_size * 2:	
-			var split := rng.randi_range(min_room_size, room.size.x - min_room_size)
-			print("split: ", split)
-			var left := Rect2(room.position, Vector2(split, room.size.y))
-			var right := Rect2(room.position + split * Vector2.RIGHT, Vector2(room.size.x - split, room.size.y))
+		var add := true
+		var room := Rect2(location, size)
+		var buffer := Rect2(location - Vector2(2, 2), size + Vector2(4, 4))
+		
+		var room_debug := debug_rect(room)
+		var buffer_debug := debug_rect(buffer)
+		
+		yield(button, "button_down")
+		
+		for other_room in rooms:
+			if buffer.intersects(other_room):
+				add = false
+				break
+		
+		if not Rect2(Vector2(), world_size).encloses(room):
+			add = false
 			
-			if is_vertical:
-				left = swap_rect_coordinates(left)
-				right = swap_rect_coordinates(right)
-			yield(debug_rect_and_wait(left), "completed")
-			queue.append(left)
-			yield(debug_rect_and_wait(right), "completed")
-			queue.append(right)
-	
-		else:
-			if is_vertical:
-				room = swap_rect_coordinates(room)	
-			print("placing room")
+		
+		print("" if add else "not ", "adding")
+		
+		if add:
+			rooms.append(room)
 			place_room(room)
-
+			
+		yield(button, "button_down")
+		
+		room_debug.queue_free()
+		buffer_debug.queue_free()
+	print("success rate: ", float(len(rooms)) / room_max_count)
+			
 func place_room(room: Rect2):
 	var floor_tile := floor_map.tile_set.find_tile_by_name("Floor1")
 	for i in room.size.x:
@@ -102,9 +103,3 @@ func _on_ToggleZoom_button_down():
 		camera.zoom = 2 * Vector2.ONE
 	else:
 		camera.zoom = 0.25 * Vector2.ONE
-
-func swap_rect_coordinates(rect: Rect2) -> Rect2:
-	return Rect2(
-		Vector2(rect.position.y, rect.position.x),
-		Vector2(rect.size.y, rect.size.x)
-	)
