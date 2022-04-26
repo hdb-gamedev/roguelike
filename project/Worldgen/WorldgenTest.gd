@@ -46,51 +46,46 @@ func debug_rect_and_wait(rect: Rect2):
 	
 	color_rect.queue_free()
 	
-func place_rooms():
-	var splitted := split_space()
-	
-	for section in splitted:
-		if true:
-			var room: Rect2 = section.grow(-1)
-			place_room(room)
-		
 
-func split_space() -> Array:
-	var min_room_size := 6
+func place_rooms():
+	var min_room_size := 4
 	
 	var queue := [Rect2(Vector2.ZERO, world_size)]
-	var rooms := []
-	
 	while queue:
 		var room: Rect2 = queue.pop_front()
+		print("start: ", room.position, " end: ", room.end)
+		yield(debug_rect_and_wait(room), "completed")
 		
 		var is_vertical := rng.randf() > 0.5
 		
 		if is_vertical:
+			print("vertical")
 			room = swap_rect_coordinates(room)
+		else:
+			print("horizontal")
 		
 		if room.size.x <= min_room_size * 2:
 			is_vertical = not is_vertical
 			room = swap_rect_coordinates(room)
 		if room.size.x > min_room_size * 2:	
-			var split := rng.randi_range(min_room_size + 4, room.size.x - min_room_size - 4)
-
+			var split := rng.randi_range(min_room_size, room.size.x - min_room_size)
+			print("split: ", split)
 			var left := Rect2(room.position, Vector2(split, room.size.y))
 			var right := Rect2(room.position + split * Vector2.RIGHT, Vector2(room.size.x - split, room.size.y))
 			
 			if is_vertical:
 				left = swap_rect_coordinates(left)
 				right = swap_rect_coordinates(right)
-			
+			yield(debug_rect_and_wait(left), "completed")
 			queue.append(left)
+			yield(debug_rect_and_wait(right), "completed")
 			queue.append(right)
 	
 		else:
 			if is_vertical:
 				room = swap_rect_coordinates(room)	
-			
-			rooms.append(room)
-	return rooms
+			print("placing room")
+			place_room(room)
 
 func place_room(room: Rect2):
 	var floor_tile := floor_map.tile_set.find_tile_by_name("Floor1")
