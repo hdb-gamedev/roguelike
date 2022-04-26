@@ -13,6 +13,4 @@ name = "Polish Arm"
 description = "from Poland"
 rarity = 4
 sprite = SubResource( 1 )
-properties = {
-"damage": 10.0
-}
+damage = 10.0

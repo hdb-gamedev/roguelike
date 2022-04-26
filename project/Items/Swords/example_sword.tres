@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Items/Swords/Sword.gd" type="Script" id=1]
+[ext_resource path="res://Items/Assets/MedWep.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 16, 16 )
+
+[resource]
+script = ExtResource( 1 )
+name = "Pickaxe"
+description = "not actually a pickaxe"
+rarity = 1
+sprite = SubResource( 1 )
+damage = 10.0
+swing_speed = 720.0

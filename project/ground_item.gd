@@ -3,7 +3,9 @@ extends Node2D
 export(Resource) var item
 
 func _ready():
-	print("ready: ", item.properties.size())
+	#item = load("res://Items/Polearms/halibutberd.tres")
+	#print("load: ", load("res://Items/Polearms/halibutberd.tres").name)
+	#print("ready: ", item.properties.size())
 	$Sprite.texture = item.sprite
 	
 

@@ -13,6 +13,4 @@ name = "Halibutberd"
 description = "a halberd that smells vaguely of halibut"
 rarity = 3
 sprite = SubResource( 1 )
-properties = {
-"damage": 10.0
-}
+damage = 10.0

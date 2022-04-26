@@ -29,5 +29,5 @@ func add_item(item):
 			item_stack.count += item.count
 			return
 	inventory.append(item)
-	print(item.properties.size())
+	#print(item.propertie1s.size())
 

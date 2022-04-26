@@ -15,7 +15,7 @@ export(String) var name
 export(String) var description
 export(Rarity) var rarity
 export(Texture) var sprite
-export(Dictionary) var properties = {} setget check_keys
+#export(Dictionary) var properties = {} setget check_keys
 var count = 1
 
 func check_keys(value):
