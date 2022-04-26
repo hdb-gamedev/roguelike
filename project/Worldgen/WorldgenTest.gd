@@ -4,14 +4,19 @@ extends Node2D
 
 var rng: RandomNumberGenerator
 
-var world_size := Vector2(32, 32)
+var world_size := Vector2(128, 128)
 
 const Player = preload("res://Enemies/Player.gd")
 
-onready var wall_map: TileMap = $Wall
-onready var floor_map: TileMap = $Floor
-onready var player: Player = $Player
+onready var wall_map: TileMap = $YSort/Wall
+onready var floor_map: TileMap = $YSort/Floor
+onready var player: Player = $YSort/Player
 onready var button: Button = $CanvasLayer/HBoxContainer/ClickMe
+
+var RoomTypes = [
+	preload("res://Worldgen/RoomTypes/RoomInstance.gd"),
+	preload("res://Worldgen/RoomTypes/GreenRoom.gd")
+]
 
 func _ready():
 	rng = RandomNumberGenerator.new()
@@ -21,8 +26,8 @@ func _ready():
 	
 	#player.position = world_size / 2
 	player.position = Vector2.ZERO
-	debug_rect(Rect2(Vector2.ZERO, world_size))
-	debug_rect(Rect2(Vector2.ZERO, Vector2.ONE))
+#	debug_rect(Rect2(Vector2.ZERO, world_size))
+#	debug_rect(Rect2(Vector2.ZERO, Vector2.ONE))
 	
 	place_rooms()
 
@@ -39,66 +44,65 @@ func debug_rect(rect: Rect2) -> ColorRect:
 	return color_rect
 	
 
+func get_room_instance() -> RoomInstance:
+	return RoomInstance.new()
+
 func place_rooms():
-	var room_max_count := 50
+	var room_max_count := 250
 	
 	var max_room_size := Vector2(8, 8)
 	
 	var rooms := []
 	
 	for i in room_max_count:
-		var location = Vector2(
+		var room_instance := get_room_instance()
+		
+		var location := Vector2(
 			rng.randi_range(0, world_size.x),
 			rng.randi_range(0, world_size.y)
 		)
 		
 		var size := Vector2(
-			rng.randi_range(4, max_room_size.x),
-			rng.randi_range(4, max_room_size.y)
+			rng.randi_range(room_instance.min_size.x, room_instance.max_size.x),
+			rng.randi_range(room_instance.min_size.y, room_instance.max_size.y)
 		)
 		
-		
 		var add := true
-		var room := Rect2(location, size)
-		var buffer := Rect2(location - Vector2(2, 2), size + Vector2(4, 4))
+		room_instance.rect = Rect2(location, size)
+		var buffer := room_instance.rect.grow(2)
 		
-		var room_debug := debug_rect(room)
+		var room_debug := debug_rect(room_instance.rect)
 		var buffer_debug := debug_rect(buffer)
 		
-		yield(button, "button_down")
+		# yield(button, "button_down")
 		
 		for other_room in rooms:
 			if buffer.intersects(other_room):
 				add = false
 				break
 		
-		if not Rect2(Vector2(), world_size).encloses(room):
+		if not Rect2(Vector2(), world_size).encloses(room_instance.rect):
 			add = false
 			
 		
 		print("" if add else "not ", "adding")
 		
 		if add:
-			rooms.append(room)
-			place_room(room)
+			rooms.append(room_instance.rect)
+			room_instance.place(floor_map, wall_map)
 			
-		yield(button, "button_down")
+		# yield(button, "button_down")
 		
 		room_debug.queue_free()
 		buffer_debug.queue_free()
 	print("success rate: ", float(len(rooms)) / room_max_count)
-			
-func place_room(room: Rect2):
-	var floor_tile := floor_map.tile_set.find_tile_by_name("Floor1")
-	for i in room.size.x:
-		for j in room.size.y:
-			var pos := Vector2(room.position.x + i, room.position.y + j)
-			floor_map.set_cellv(pos, floor_tile)
+	
 	floor_map.update_bitmask_region()
+	wall_map.update_bitmask_region()
 
 
 func _on_ToggleZoom_button_down():
-	var camera: Camera2D = $Player/Camera2D
+	var camera: Camera2D = $YSort/Player/Camera2D
 	if camera.zoom.x == 0.25:
 		camera.zoom = 2 * Vector2.ONE
 	else:

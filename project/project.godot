@@ -14,10 +14,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Items/Item.gd"
 }, {
-"base": "Item",
+"base": "Reference",
 "class": "Polearm",
 "language": "GDScript",
 "path": "res://Items/Polearm.gd"
+}, {
+"base": "Node",
+"class": "RoomInstance",
+"language": "GDScript",
+"path": "res://Worldgen/RoomTypes/RoomInstance.gd"
 }, {
 "base": "Item",
 "class": "Sword",
@@ -27,6 +32,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Item": "",
 "Polearm": "",
+"RoomInstance": "",
 "Sword": ""
 }
 
