@@ -5,8 +5,10 @@ const bow_scene = preload("res://Items/Bows/BowScene.tscn")
 const projectile_scene = preload("res://ProjectileScene.tscn")
 var bow
 var time = 0
+export(float) var damage
+export(float) var reload_time
 
-func use_primary(player):
+func hold_primary(player):
 	if time > 0:
 		return
 	var projectile = projectile_scene.instance()
@@ -14,7 +16,8 @@ func use_primary(player):
 	projectile.look_at(projectile.global_position + player.get_global_mouse_position() - player.global_position)
 	Globulars.player.get_parent().get_parent().add_child(projectile)
 	bow.get_node("AudioStreamPlayer").play()
-	time = properties["reload time"]
+	time = reload_time
+
 func update(delta):
 	# set bow to visible if it is the currently selected item
 	bow.visible = Globulars.inventory.find(self) == Globulars.selected_hotbar_slot

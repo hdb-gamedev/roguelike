@@ -4,6 +4,7 @@ extends Item
 const polearm_scene = preload("res://Items/Polearms/PolearmScene.tscn")
 var cooldown = 0;
 var polearm
+export(float) var damage
 
 func use_primary(player):
 	if cooldown > 0:

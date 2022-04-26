@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "PolearmScene",
 "language": "GDScript",
 "path": "res://Items/Polearms/PolearmScene.gd"
+}, {
+"base": "Item",
+"class": "Sword",
+"language": "GDScript",
+"path": "res://Items/Swords/Sword.gd"
 } ]
 _global_script_class_icons={
 "Bow": "",
 "Item": "",
 "Polearm": "",
-"PolearmScene": ""
+"PolearmScene": "",
+"Sword": ""
 }
 
 [application]
