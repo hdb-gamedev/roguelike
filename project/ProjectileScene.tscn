@@ -12,7 +12,6 @@ region = Rect2( 0, 32, 16, 16 )
 
 [node name="ProjectileScene" type="KinematicBody2D"]
 collision_layer = 2
-collision_mask = 16
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -22,3 +21,11 @@ shape = SubResource( 2 )
 [node name="Node2D" type="Sprite" parent="."]
 rotation = 3.92699
 texture = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0.5, 0 )
+shape = SubResource( 2 )

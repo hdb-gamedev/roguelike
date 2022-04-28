@@ -3,6 +3,7 @@ extends Node2D
 var rotation_speed
 var swing_time = 0.25
 var swinging = false
+var item
 
 func start_swing():
 	look_at(get_global_mouse_position())

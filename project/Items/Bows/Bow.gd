@@ -14,6 +14,7 @@ func hold_primary(player):
 	var projectile = projectile_scene.instance()
 	projectile.global_position = bow.get_node("Sprite/FirePosition").global_position
 	projectile.look_at(projectile.global_position + player.get_global_mouse_position() - player.global_position)
+	projectile.item = self
 	Globulars.player.get_parent().get_parent().add_child(projectile)
 	bow.get_node("AudioStreamPlayer").play()
 	time = reload_time

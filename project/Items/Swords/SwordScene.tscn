@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Items/Assets/MedWep.png" type="Texture" id=1]
 [ext_resource path="res://Items/Swords/SwordScene.gd" type="Script" id=2]
@@ -7,6 +7,9 @@
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 16, 16 )
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8.5, 3.73094 )
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -14,3 +17,14 @@ script = ExtResource( 2 )
 position = Vector2( 13, 0 )
 rotation = 2.35619
 texture = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 13, 0 )
+rotation = 2.35619
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.163299, -0.543811 )
+rotation = 0.785398
+shape = SubResource( 2 )

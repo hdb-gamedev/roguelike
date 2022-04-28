@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Tilemap/Tilesets/Wall.tres" type="TileSet" id=1]
 [ext_resource path="res://Tilemap/Tilesets/Floor.tres" type="TileSet" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Music/ambiance.wav" type="AudioStream" id=10]
 [ext_resource path="res://Items/Bows/DaedalusStormbow.tres" type="Resource" id=11]
 [ext_resource path="res://Items/Swords/example_sword.tres" type="Resource" id=12]
+[ext_resource path="res://enemies/ghost.tscn" type="PackedScene" id=13]
 
 [node name="Node2D" type="Node2D"]
 
@@ -91,3 +92,6 @@ item = ExtResource( 11 )
 [node name="ground_item" parent="." instance=ExtResource( 6 )]
 position = Vector2( 54, -38 )
 item = ExtResource( 4 )
+
+[node name="Ghost" parent="." instance=ExtResource( 13 )]
+position = Vector2( 65, -13 )

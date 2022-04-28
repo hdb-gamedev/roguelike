@@ -6,7 +6,6 @@ export(float) var maxd
 var time = 0
 var item
 
-
 func _ready():
 	look_at(get_global_mouse_position())
 	#$AnimationPlayer.play("Polearm")

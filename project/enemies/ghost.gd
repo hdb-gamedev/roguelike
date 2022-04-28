@@ -22,7 +22,11 @@ func _on_ghostbody_area_entered(area):
 	if not parentnode.visible:
 		return
 	var item = parentnode.get("item")
-	if not item.properties.has("damage"):
-		return
-	print(item.properties.get("damage"))
+	if item is Sword:
+		print("hit by sword")
+	if item is Bow:
+		print("hit by bow")
+		parentnode.queue_free()
+	if item is Polearm:
+		print("hit by polearm")
 	$AnimationPlayer.play("hit")

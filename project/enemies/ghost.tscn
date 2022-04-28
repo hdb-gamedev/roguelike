@@ -5,7 +5,6 @@
 [ext_resource path="res://Enemies/ghost.gd" type="Script" id=3]
 [ext_resource path="res://Lighting/Light2D.tscn" type="PackedScene" id=4]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.0
 height = 4.0
@@ -38,25 +37,25 @@ region = Rect2( 0, 64, 16, 16 )
 atlas = ExtResource( 2 )
 region = Rect2( 0, 64, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
-region = Rect2( 32, 64, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 2 )
-region = Rect2( 32, 64, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
 region = Rect2( 16, 64, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 64, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 64, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
 region = Rect2( 48, 64, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 2 )
-region = Rect2( 16, 64, 16, 16 )
+region = Rect2( 32, 64, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
@@ -69,9 +68,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 4 ), SubResource( 8 ) ],
+"frames": [ SubResource( 3 ), SubResource( 7 ) ],
 "loop": true,
-"name": "attack",
+"name": "moving",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
@@ -79,9 +78,9 @@ animations = [ {
 "name": "everything",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 7 ) ],
+"frames": [ SubResource( 4 ), SubResource( 8 ) ],
 "loop": true,
-"name": "moving",
+"name": "attack",
 "speed": 5.0
 } ]
 
@@ -106,7 +105,6 @@ anims/hit = SubResource( 12 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 10 )
 animation = "attack"
-frame = 1
 playing = true
 
 [node name="AttackTimer" type="Timer" parent="."]

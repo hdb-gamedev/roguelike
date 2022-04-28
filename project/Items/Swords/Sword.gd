@@ -10,6 +10,7 @@ func initialize():
 	sword = sword_scene.instance()
 	sword.rotation_speed = swing_speed
 	sword.visible = false
+	sword.item = self
 	sword.get_node("Sprite").texture = sprite
 	Globulars.player.add_child(sword)
 
